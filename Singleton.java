@@ -1,30 +1,30 @@
-package com.multi;
+package com.assesments;
 
 public class Singleton {
 
-	private static Singleton Instance;
+	private static Singleton instance;
 
 	private Singleton() {
-		System.out.println("Singleton.Singleton(.................)");
+		System.out.println(" Singleton constrocter is created");
 	}
 
-	private static Singleton GetInstance() {
-		if (Instance == null)
+	public static Singleton getInstance() {
+		if (instance == null)
 
-			Instance = new Singleton();
-		return Instance;
+			instance = new Singleton();
+		return instance;
 	}
 
 	public void doSomething() {
-		System.out.println("Singleton.doSomething()");
-
+		System.out.println("doing something");
 	}
 
-	public class gfs
-	{
-		public void main(String[] args) {
-			
-			Instance.GetInstance().doSomething();
+	public class xy {
+
+		public static void main(String[] args) {
+			Singleton singleton = new Singleton();
+			singleton.getInstance().doSomething();
 		}
 	}
+
 }

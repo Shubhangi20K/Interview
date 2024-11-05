@@ -1,21 +1,19 @@
-package com.multi;
+package com.assesments;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class Test {
 
 
-	void show(int a)
-	{
-		System.out.println("1"); 
-	}
-	String show(int a)
-	{
-		System.out.println("2");
-	
-	}
-
-	public static void main(String[] args)
-	{
-		Test t =new Test();
-		t.show("shubhangi");
+	public static void main(String[] args) {
+		
+		try {
+			FileInputStream file = new FileInputStream("c:/ABC.txt");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }

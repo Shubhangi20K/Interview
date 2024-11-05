@@ -1,27 +1,38 @@
-package com.multi;
+package com.assesments;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class Student {
-
-	public Student(String string, int i, String string2) {
-		// TODO Auto-generated constructor stub
+public class Student implements Comparable<Student>{
+	private int id;
+	private String name;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Student(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	@Override
+	public int compareTo(Student o) {
+		 if(this.id > o.id)
+		 {
+				return 1;
+		 }
+		 else
+		 {
+			 return 0;
+		 }
 	}
 
-	public static void main(String[] args) {
-		String Name;
-		int Age;
-		String Subject;
-		List<Student> st= new ArrayList<>(Arrays.asList(
-				new Student("shubhangi",20,"Maths"),
-				new Student("shubhanshu",21,"Science")
-				));
-		st.stream().sorted(Comparator.comparingInt()).collect(Collectors.toList());
-		
-	}
+	
+	
+	
 }

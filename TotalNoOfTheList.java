@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class EvenNoInList {
+public class TotalNoOfTheList {
 
 	public static void main(String[] args) {
-		List<Integer>list=Arrays.asList(1,11,12,30,6);
-		List<Integer>Result = list.stream().filter(i->i%2==0).collect(Collectors.toList());
+	
+		List<String> str = Arrays.asList("shubhangi" ,"shubhanshu","kurelay");
+		long Result=str.stream().count();
 		System.out.println(Result);
-
 	}
 }
